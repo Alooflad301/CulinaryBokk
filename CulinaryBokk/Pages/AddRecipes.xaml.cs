@@ -78,18 +78,16 @@ namespace CulinaryBokk.Pages
                         MessageBox.Show("Не заполнены все поля!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                         return;
                     }
-                    else
+                    Recipes userObj = new Recipes()
                     {
-                        string messag = "Изменения сохранены!";
-                        if (recipes.RecipeID == 0)
-                        {
-                            recipes.CategoryID = AppData.AppConnect.model0db.Categories.FirstOrDefault(x => x.CategoryName == CategoryCombo.Text).CategoryID;
-                            recipes.AuthorID = AppData.AppConnect.model0db.Authors.LastOrDefault(x => x.AuthorName == AuyhorCombo.Text).AuthorID;
-
-                            AppConnect.model0db.Recipes.Add(recipes);
-                            messag = "Запись добавлена!";
-                        }
-                    }
+                    RecipeName = NameRecepis.Text,
+                    Description = DescRecipes.Text,
+                    CategoryID = CategoryCombo.SelectedIndex,
+                    AuthorID = AuyhorCombo.SelectedIndex,
+                    CookingTime = int.Parse(TextTime.Text),
+                    image = TextPage.Text,
+                    };
+                    AppConnect.model0db.Recipes.Add(userObj);
                     AppConnect.model0db.SaveChanges();
                     MessageBox.Show("Данные успешно добавлены!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                     AppData.AppFrame.framemain.GoBack();

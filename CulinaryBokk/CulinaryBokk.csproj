@@ -143,10 +143,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\PageLike.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\PageReg.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -162,9 +158,6 @@
     </Compile>
     <Compile Include="Pages\PageAftoriz.xaml.cs">
       <DependentUpon>PageAftoriz.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PageLike.xaml.cs">
-      <DependentUpon>PageLike.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageReg.xaml.cs">
       <DependentUpon>PageReg.xaml</DependentUpon>
@@ -207,17 +200,19 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Resource Include="Images\Zagluhca.jpg" />
-    <Resource Include="Images\Bestro.jpg" />
-    <Content Include="Images\Borh.jpg" />
-    <Resource Include="Images\Kurica.jpg" />
-    <Resource Include="Images\Musso.jpg" />
-    <Resource Include="Images\Paltus.jpg" />
-    <Resource Include="Images\Punsh.jpg" />
-    <Resource Include="Images\Pure.jpg" />
-    <Resource Include="Images\Rulet.png" />
-    <Resource Include="Images\Salate.jpg" />
-    <Resource Include="Images\Steke.jpg" />
+    <Resource Include="Images\Zagluhca.png" />
+    <Resource Include="Images\best.jpg" />
+    <Resource Include="Images\borsh.jpg" />
+    <Resource Include="Images\cypfasoli.jpg" />
+    <Resource Include="Images\muss.jpg" />
+    <Resource Include="Images\paltys.jpg" />
+    <Resource Include="Images\pomidor.jpg" />
+    <Resource Include="Images\pure.jpg" />
+    <Resource Include="Images\rulet.png" />
+    <Resource Include="Images\salatananas.jpg" />
+    <Resource Include="Images\sokpepl.jpg" />
+    <Resource Include="Images\supert.jpg" />
+    <Resource Include="Images\stake.jpg" />
     <Resource Include="vecteezy_fried-chicken-png-graphic-clipart-design_19607570.png" />
     <Resource Include="00.png" />
     <Resource Include="ййй.png" />
