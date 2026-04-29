@@ -143,6 +143,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageFaza.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageReg.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -158,6 +162,9 @@
     </Compile>
     <Compile Include="Pages\PageAftoriz.xaml.cs">
       <DependentUpon>PageAftoriz.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageFaza.xaml.cs">
+      <DependentUpon>PageFaza.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageReg.xaml.cs">
       <DependentUpon>PageReg.xaml</DependentUpon>
@@ -215,10 +222,8 @@
     <Resource Include="Images\stake.jpg" />
     <Resource Include="vecteezy_fried-chicken-png-graphic-clipart-design_19607570.png" />
     <Resource Include="00.png" />
-    <Resource Include="ййй.png" />
     <Resource Include="01.png" />
     <Resource Include="0.png" />
-    <Resource Include="ррр.png" />
     <Resource Include="1455739652_Kitchen_Bold_Line_Color_Mix-33_icon-icons.com_53417.ico" />
     <Content Include="AppData\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -230,8 +235,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Resource Include="gg.jpg" />
-    <Resource Include="rrr.png" />
     <Resource Include="Coc.jpg" />
   </ItemGroup>
   <ItemGroup>

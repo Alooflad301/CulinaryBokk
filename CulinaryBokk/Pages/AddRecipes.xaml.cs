@@ -157,5 +157,9 @@ namespace CulinaryBokk.Pages
             }
         }
 
+        private void FazaButton_Click(object sender, RoutedEventArgs e)
+        {
+            AppFrame.framemain.Navigate(new PageFaza());
+        }
     }
 }
