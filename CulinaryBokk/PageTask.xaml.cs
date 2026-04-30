@@ -143,6 +143,7 @@ namespace CulinaryBokk
             if (listProduct.SelectedItem is Recipes selectedRecipe)
             {
                 NavigationService.Navigate(new AddRecipes(selectedRecipe));
+
                 listProduct.Items.Refresh();
             }
             else

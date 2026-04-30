@@ -8,7 +8,34 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PageFaza">
 
-    <Grid>
-        
+    <Grid Background="Azure">
+       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Margin="10">
+            <TextBlock FontFamily="Segoe Script" Text="Этапы приготовления блюда:"  FontSize="36" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <TextBlock FontFamily="Segoe Script" Text="{Binding RecipeName}" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <Image Source="{Binding CurrentPhoto}" Height="200" Stretch="Uniform"/>
+        </StackPanel>
+        <ListView Grid.Row="1" x:Name="ListFaza">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="10">
+                        <TextBlock FontSize="18" FontFamily="Segoe Script">
+                    <Run Text="Этап "/>
+                    <Run Text="{Binding StepNumber}"/>
+                    <Run Text=" — "/>
+                    <Run Text="{Binding StepDescription}"/>
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel Grid.Row="2">
+            <Button x:Name="BackButton" FontWeight="Bold"  FontFamily="Segoe Script" FontSize="20" Content="Назад" Height="auto" Width="Auto" Padding="30,5,30,5" Margin="10" HorizontalAlignment="Left" Click="BackButton_Click"/>
+        </StackPanel>
     </Grid>
 </Page>

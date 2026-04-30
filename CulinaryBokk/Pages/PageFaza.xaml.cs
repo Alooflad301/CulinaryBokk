@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CulinaryBokk.AppData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,19 @@ namespace CulinaryBokk.Pages
     /// </summary>
     public partial class PageFaza : Page
     {
-        public PageFaza()
+        public PageFaza(Recipes recipe)
         {
             InitializeComponent();
+            this.DataContext = recipe;
+            if (recipe.CookingSteps != null)
+            {
+                ListFaza.ItemsSource = recipe.CookingSteps.OrderBy(x => x.StepNumber).ToList();
+            }
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            AppFrame.framemain.GoBack();
         }
     }
 }
